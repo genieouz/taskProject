@@ -10,4 +10,12 @@ export class TasksService {
   attachFile(data) {
     return this.http.put(`${environment.API_URL}/attach-file`, data);
   }
+
+  getTasks() {
+    return this.http.get(`${environment.API_URL}/tache`);
+  }
+
+  addTask(data) {
+    return this.http.post(`${environment.API_URL}/tache`, data);
+  }
 }

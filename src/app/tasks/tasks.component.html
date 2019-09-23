@@ -1,3 +1,18 @@
-<div>
+<form class="col-sm-4">
+  <input name="titre" [(ngModel)] = "titre" class="form-control">
+  <input name="etat" [(ngModel)]="etat" class="form-control">
   <input type="file" #attach (change)="detectFileChanges(attach.files)" />
-</div>
+</form>
+
+<ng-container *ngFor="let task of tasks">
+  <hr>
+  <div class="row">
+    <div class="col-sm-3">
+      <img class="col-sm-12" *ngIf="task.file" [src]="generateLink(API_URL+'/attachments/'+task.file)">
+    </div>
+    <div class="col-sm-9">
+      <div class="col-sm-3">{{ task.titre }}</div>
+      <div class="col-sm-3">{{ task.etat }}</div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,45 @@
+<form method="POST" class="col-sm-6 offset-3 jumbotron" (submit)="register()">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">Prénom:</div>
+            <div class="col-sm-7">
+                <input name="prenom" type="text" class="form-control" [(ngModel)]="user.prenom"> 
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">Nom:</div>
+            <div class="col-sm-7">
+                <input name="nom" type="text" class="form-control" [(ngModel)]="user.nom">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">Username:</div>
+            <div class="col-sm-7">
+                <input name="username" type="text" class="form-control" [(ngModel)]="user.username">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-5">Password</div>
+            <div class="col-sm-7">
+                <input name="password" type="password" class="form-control" [(ngModel)]="user.password">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="offset-5 col-sm-7">
+                <button class="btn btn-block btn-primary">S'inscrire</button>
+            </div>
+        </div>
+    </div>
+</form>
